@@ -20,7 +20,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "lesson1 数据结构与算法总览.md",
+            "file": "readme.md",
             "mode": "source"
           }
         },
@@ -33,7 +33,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "lesson1 数据结构与算法总览.md",
+            "file": "readme.md",
             "mode": "preview"
           }
         },
@@ -97,8 +97,12 @@
   },
   "attachmentFolderPath": "attachments",
   "lastOpenFiles": [
-    "lesson1 数据结构与算法总览.md",
     "readme.md",
+    "lesson1 数据结构与算法总览.md",
+<<<<<<< HEAD
+    "readme.md",
+=======
+>>>>>>> 80f7db4ca70cd871ed25a9829d27f55aed6ef9fb
     "attachments/lesson1_mindmap.png",
     "attachments/lesson1 mindmap.png"
   ]

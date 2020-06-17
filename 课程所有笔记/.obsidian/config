@@ -1,5 +1,5 @@
 {
-  "theme": "obsidian",
+  "theme": "moonstone",
   "pluginEnabledStatus": {
     "File explorer": true,
     "Search": true,
@@ -11,47 +11,34 @@
     "Word count": true
   },
   "workspaceLayout": {
-    "id": "47806e65fa5aaeee",
+    "id": "89cd7c9d8a9a851d",
     "type": "split",
     "children": [
       {
-        "id": "0018f307226f3dc8",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "readme.md",
-            "mode": "source"
-          }
-        },
-        "group": "dcea2f81a4e6656f"
-      },
-      {
-        "id": "fe1be1a80acf4aca",
+        "id": "18c2b06a7e46288f",
         "type": "leaf",
         "active": true,
         "state": {
           "type": "markdown",
           "state": {
-            "file": "readme.md",
+            "file": "图片添加方法.md",
             "mode": "preview"
           }
-        },
-        "group": "dcea2f81a4e6656f"
+        }
       }
     ],
     "direction": "vertical"
   },
   "leftSidedock": {
-    "id": "3264fd3212733037",
+    "id": "56ac2ce8ed2349f0",
     "type": "split",
     "children": [
       {
-        "id": "52d57103185b3527",
+        "id": "d5c20a8220a3a90a",
         "type": "tabs",
         "children": [
           {
-            "id": "aa58383fe190b19d",
+            "id": "7d51c75a575af236",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -59,7 +46,7 @@
             }
           },
           {
-            "id": "a89494082c1dae9c",
+            "id": "9aa7a7d253b8aa44",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -73,15 +60,15 @@
     "width": 300
   },
   "rightSidedock": {
-    "id": "26715e72a2a19e17",
+    "id": "24fced1cd0156f9e",
     "type": "split",
     "children": [
       {
-        "id": "e7000fa6b644bc6a",
+        "id": "613c426067f354e7",
         "type": "tabs",
         "children": [
           {
-            "id": "99d9cec0b23a8b79",
+            "id": "f624239d39ea8764",
             "type": "leaf",
             "state": {
               "type": "backlink",
@@ -95,15 +82,11 @@
     "width": 300,
     "collapsed": true
   },
-  "attachmentFolderPath": "attachments",
   "lastOpenFiles": [
-    "readme.md",
+    "图片添加方法.md",
+    "第一周学习总结.md",
     "lesson1 数据结构与算法总览.md",
-<<<<<<< HEAD
-    "readme.md",
-=======
->>>>>>> 80f7db4ca70cd871ed25a9829d27f55aed6ef9fb
-    "attachments/lesson1_mindmap.png",
-    "attachments/lesson1 mindmap.png"
+    "lesson1_mindmap 1.png",
+    "attachments/lesson1_mindmap.png"
   ]
 }

@@ -17,11 +17,10 @@
       {
         "id": "0018f307226f3dc8",
         "type": "leaf",
-        "active": true,
         "state": {
           "type": "markdown",
           "state": {
-            "file": "readme.md",
+            "file": "lesson1 数据结构与算法总览.md",
             "mode": "source"
           }
         },
@@ -30,10 +29,11 @@
       {
         "id": "fe1be1a80acf4aca",
         "type": "leaf",
+        "active": true,
         "state": {
           "type": "markdown",
           "state": {
-            "file": "readme.md",
+            "file": "lesson1 数据结构与算法总览.md",
             "mode": "preview"
           }
         },
@@ -97,8 +97,8 @@
   },
   "attachmentFolderPath": "attachments",
   "lastOpenFiles": [
-    "readme.md",
     "lesson1 数据结构与算法总览.md",
+    "readme.md",
     "attachments/lesson1_mindmap.png",
     "attachments/lesson1 mindmap.png"
   ]

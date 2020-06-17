@@ -12,11 +12,19 @@
 2. deliberate practicing 刻意练习
 3. feedback 反馈
 
-### chunk it up
+	### chunk it up
 
-把整个数据结构与算法的体系, 切分成一块一块的知识点, 形成一个有互相联系/脉络相连的网络.
+	把整个数据结构与算法的体系, 切分成一块一块的知识点, 形成一个有互相联系/脉络相连的网络.
 
-### deliberate practicing
+	### deliberate practicing
+	![[lesson1_mindmap.png]][[lesson1_mindmap.png]]
+
+
+
+
+
+
+
 
 
 

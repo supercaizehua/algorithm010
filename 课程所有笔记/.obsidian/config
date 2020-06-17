@@ -15,29 +15,29 @@
     "type": "split",
     "children": [
       {
-        "id": "136cc67b67a5979d",
+        "id": "0018f307226f3dc8",
         "type": "leaf",
         "active": true,
         "state": {
           "type": "markdown",
           "state": {
-            "file": "lesson1 数据结构与算法总览.md",
+            "file": "readme.md",
             "mode": "source"
           }
         },
-        "group": "791ff65832a59ef8"
+        "group": "dcea2f81a4e6656f"
       },
       {
-        "id": "9984f92fcb2ece7e",
+        "id": "fe1be1a80acf4aca",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "lesson1 数据结构与算法总览.md",
+            "file": "readme.md",
             "mode": "preview"
           }
         },
-        "group": "791ff65832a59ef8"
+        "group": "dcea2f81a4e6656f"
       }
     ],
     "direction": "vertical"
@@ -97,7 +97,9 @@
   },
   "attachmentFolderPath": "attachments",
   "lastOpenFiles": [
+    "readme.md",
     "lesson1 数据结构与算法总览.md",
-    "readme.md"
+    "attachments/lesson1_mindmap.png",
+    "attachments/lesson1 mindmap.png"
   ]
 }

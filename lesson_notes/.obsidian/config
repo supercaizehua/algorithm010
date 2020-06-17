@@ -19,10 +19,9 @@
         "type": "leaf",
         "active": true,
         "state": {
-          "type": "markdown",
+          "type": "image",
           "state": {
-            "file": "图片添加方法.md",
-            "mode": "preview"
+            "file": "attachments/lesson1_mindmap.png"
           }
         }
       }
@@ -83,10 +82,10 @@
     "collapsed": true
   },
   "lastOpenFiles": [
-    "图片添加方法.md",
-    "第一周学习总结.md",
+    "attachments/lesson1_mindmap.png",
     "lesson1 数据结构与算法总览.md",
-    "lesson1_mindmap 1.png",
-    "attachments/lesson1_mindmap.png"
+    "readme.md",
+    "第一周学习总结.md",
+    "lesson1_mindmap 1.png"
   ]
 }

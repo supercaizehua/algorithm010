@@ -1,0 +1,103 @@
+{
+  "theme": "obsidian",
+  "pluginEnabledStatus": {
+    "File explorer": true,
+    "Search": true,
+    "Quick switcher": true,
+    "Graph view": true,
+    "Backlinks": true,
+    "Command palette": true,
+    "Markdown format importer": true,
+    "Word count": true
+  },
+  "workspaceLayout": {
+    "id": "47806e65fa5aaeee",
+    "type": "split",
+    "children": [
+      {
+        "id": "136cc67b67a5979d",
+        "type": "leaf",
+        "active": true,
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "lesson1 数据结构与算法总览.md",
+            "mode": "source"
+          }
+        },
+        "group": "791ff65832a59ef8"
+      },
+      {
+        "id": "9984f92fcb2ece7e",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "lesson1 数据结构与算法总览.md",
+            "mode": "preview"
+          }
+        },
+        "group": "791ff65832a59ef8"
+      }
+    ],
+    "direction": "vertical"
+  },
+  "leftSidedock": {
+    "id": "3264fd3212733037",
+    "type": "split",
+    "children": [
+      {
+        "id": "52d57103185b3527",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "aa58383fe190b19d",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "a89494082c1dae9c",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "rightSidedock": {
+    "id": "26715e72a2a19e17",
+    "type": "split",
+    "children": [
+      {
+        "id": "e7000fa6b644bc6a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "99d9cec0b23a8b79",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "attachmentFolderPath": "attachments",
+  "lastOpenFiles": [
+    "lesson1 数据结构与算法总览.md",
+    "readme.md"
+  ]
+}

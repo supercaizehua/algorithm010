@@ -17,13 +17,29 @@
       {
         "id": "18c2b06a7e46288f",
         "type": "leaf",
+        "dimension": 48.0719794344473,
         "active": true,
         "state": {
-          "type": "image",
+          "type": "markdown",
           "state": {
-            "file": "attachments/lesson1_mindmap.png"
+            "file": "lesson3_数组_链表_跳表.md",
+            "mode": "source"
           }
-        }
+        },
+        "group": "fdf9d84f34074f84"
+      },
+      {
+        "id": "e632307e204e9838",
+        "type": "leaf",
+        "dimension": 51.9280205655527,
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "lesson3_数组_链表_跳表.md",
+            "mode": "preview"
+          }
+        },
+        "group": "fdf9d84f34074f84"
       }
     ],
     "direction": "vertical"
@@ -82,10 +98,10 @@
     "collapsed": true
   },
   "lastOpenFiles": [
-    "attachments/lesson1_mindmap.png",
-    "lesson1 数据结构与算法总览.md",
+    "lesson3_数组_链表_跳表.md",
+    "图片添加方法.md",
     "readme.md",
-    "第一周学习总结.md",
-    "lesson1_mindmap 1.png"
+    "lesson3.md",
+    "attachments/lesson3_array.png"
   ]
 }

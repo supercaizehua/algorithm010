@@ -34,23 +34,23 @@ class Solution1:
 '''
 class Solution2_1: #两遍哈希表 时间O(n)
     def twoSum(self, nums: List[int], target: int) -> List[int]:
-        dict = {}
+        dic = {}
         for index, num in enumerate(nums):
-            dict[num] = index
+            dic[num] = index
         for i,num in enumerate(nums):
-            if target - num in dict:
-                j = dict[target - num]
+            if target - num in dic:
+                j = dic[target - num]
                 if i != j:
                     return [i,j]
 
 class Solution2_2: #一遍哈希表, 遍历的同时判断, 时间O(n), 比上面快一点点
     def twoSum(self, nums: List[int], target: int) -> List[int]:
-        dict = {}
+        dic = {}
         for i, num in enumerate(nums):
-            if num in dict:
-                return [dict[num], i]
+            if num in dic:
+                return [dic[num], i]
             else:
-                dict[target - num] = i
+                dic[target - num] = i
 
                 
 '''

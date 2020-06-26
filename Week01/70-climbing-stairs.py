@@ -30,8 +30,7 @@ n                            f(n) = f(n-1) + f(n-2)
 '''
 class Solution1_1:
     def climbStairs(self, n: int) -> int:        
-        if n == 1: return 1
-        if n == 2: return 2
+        if n <= 2: return n
         return self.climbStairs(n-1) + self.climbStairs(n-2)
 
 class Solution1_2:#数组(列表)作为缓存
@@ -54,6 +53,12 @@ class Solution1_3:#字典作为缓存
         if n not in self.dict:
             self.dict[n] = self.climbStairs(n-1) + self.climbStairs(n-2)
         return self.dict[n]
+
+        # if n in self.dic:
+        #     return self.dic[n]
+        # else:
+        #     self.dic[n] = self.climbStairs(n - 1) + self.climbStairs(n - 2)
+        #     return self.climbStairs(n)
 
 '''
 解法2

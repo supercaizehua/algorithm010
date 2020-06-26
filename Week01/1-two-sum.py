@@ -19,13 +19,10 @@ from typing import List
 class Solution1:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         lenth = len(nums)
-        ans = []
         for i in range(lenth-1):
             for j in range(i+1, lenth):
                 if nums[i] + nums[j] == target:
-                    ans.append(i)
-                    ans.append(j)
-                    return ans
+                    return [i, j]
         return None
             
 

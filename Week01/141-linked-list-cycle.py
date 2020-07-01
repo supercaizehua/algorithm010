@@ -8,6 +8,7 @@ data: 2020-6-29 15:56:47
 pos表示尾部连接到的结点
 输出：True or False
 '''
+
 '''
 solution0:
 暴力法
@@ -28,8 +29,8 @@ class Solution0:
 
 '''
 解法1:
-暴力法
-利用python方法id（）得到结点的地址，存入一个hash表， 如果有环就返回True
+hash
+存入一个hash表， 如果有环就返回True
 没有环的话，循环就会退出
 时间O(n), 空间O(n)
 '''
@@ -37,11 +38,10 @@ class Solution1:
     def hasCycle(self, head: ListNode) -> bool:
         visited = set()
         while head:
-            address_of_node = id(head)
-            if address_of_node in visited:
+            if head in visited:
                 return True
             else:
-                visited.add(address_of_node)
+                visited.add(head)
             head = head.next
         return False
 

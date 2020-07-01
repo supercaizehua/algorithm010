@@ -46,10 +46,9 @@ class Solution2:
     def reverseList(self, head: ListNode) -> ListNode:
         pre = None
         while head:
-            curr = head
-            head = head.next
-            curr.next = pre
-            pre = curr
+            nex = head.next
+            head.next = pre
+            pre, head = head, nex
         return pre
 
 

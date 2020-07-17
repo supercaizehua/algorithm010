@@ -1,0 +1,96 @@
+{
+  "main": {
+    "id": "89cd7c9d8a9a851d",
+    "type": "split",
+    "children": [
+      {
+        "id": "18c2b06a7e46288f",
+        "type": "leaf",
+        "dimension": 48.0719794344473,
+        "active": true,
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "lesson3_数组_链表_跳表.md",
+            "mode": "source"
+          }
+        },
+        "group": "fdf9d84f34074f84"
+      },
+      {
+        "id": "e632307e204e9838",
+        "type": "leaf",
+        "dimension": 51.9280205655527,
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "lesson3_数组_链表_跳表.md",
+            "mode": "preview"
+          }
+        },
+        "group": "fdf9d84f34074f84"
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "56ac2ce8ed2349f0",
+    "type": "split",
+    "children": [
+      {
+        "id": "d5c20a8220a3a90a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7d51c75a575af236",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "9aa7a7d253b8aa44",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "24fced1cd0156f9e",
+    "type": "split",
+    "children": [
+      {
+        "id": "613c426067f354e7",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f624239d39ea8764",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "lastOpenFiles": [
+    "lesson3_数组_链表_跳表.md",
+    "图片添加方法.md",
+    "readme.md",
+    "lesson3.md",
+    "attachments/lesson3_array.png"
+  ]
+}

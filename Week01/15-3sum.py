@@ -90,6 +90,33 @@ class Solution3:
         return list(ans)
         #判断条件太多, 反而影响速度
 
+class Solution3_1:
+    def threeSum(self, nums: List[int]) -> List[List[int]]:
+        ans = []
+        nums.sort()
+        size = len(nums)
+        for i in range(size - 2):
+            if nums[i] > 0: break
+            if i > 0 and nums[i] == nums[i-1]: continue
+
+            l, r = i+1, size-1
+            while l < r:
+                sum_ = nums[i] + nums[l] + nums[r]
+
+                if sum_ < 0:
+                    l += 1
+                elif sum_ > 0:
+                    r -= 1
+                else:
+                    ans.append([nums[i], nums[l], nums[r]])
+                    while l < r and nums[l] == nums[l + 1]:
+                        l += 1
+                    while l < r and nums[r] == nums[r - 1]:
+                        r -= 1
+                    l += 1
+                    r -= 1
+        return ans
+
 
 
 

@@ -31,40 +31,40 @@ class ListNode:
 '''
 class Solution1_1:
     def reverseKGroup(self, head: ListNode, k: int) -> ListNode:
-        dummy = ListNode(0)
+        dummy = pre = ListNode(0)
         dummy.next = head
-        pre = dummy
-        
+
         while head:
             tail = pre
-            # 找出 k 个节dian
-            for i in range(k):
+            # 找到k个结点
+            for _ in range(k):
                 tail = tail.next
-                if not tail: #不满k个
-                    return dummy.next
-            nex = tail.next
+                if not tail: return dummy.next #不满k个节点直接返回
+            
+            #下一段待处理的链表的的头
+            next_head = tail.next
 
-            # 进行翻转操作， 返回新链表的头和尾            
-            head, tail = self.reverse(head, tail)
+            #反转后的新链表的头和尾
+            new_head, new_tail = self.reverse(head, tail)
 
-            # 将翻转后的链表连接到原来的链表
-            pre.next = head
-            tail.next = nex
-            pre = tail
-            head = nex
+            #将翻转后的头和尾连接到原来的链表上去
+            pre.next = new_head
+            new_tail.next = next_head
+            pre = new_tail
+            head = next_head
 
         return dummy.next
 
-    def reverse(self, head: ListNode, tail: ListNode):# k是小于等于链表长度的正整数, 所以这里一定不是空
+    def reverse(self, head, tail):
         pre = None
-        cur = new_tail = head
+        cur = new_head = new_tail = head
         while cur != tail:
-            head = head.next
+            new_head = new_head.next
             cur.next = pre
             pre = cur
-            cur = head
+            cur = new_head
         cur.next = pre
-        return head, new_tail
+        return new_head, new_tail
 
 
 '''
@@ -80,25 +80,27 @@ class Solution2:
         if not head or not head.next: return head
 
         next_head = head
-        for i in range(k):
+        for _ in range(k):
             if not next_head: return head
             next_head = next_head.next
-        new_head = self.reverse(head, next_head)
+        new_head, new_tail = self.reverse(head, next_head)
 
-        head.next = self.reverseKGroup(next_head, k)
+        new_tail.next = self.reverseKGroup(next_head, k)
 
         return new_head
 
     def reverse(self, head, next_head):
-        pre = nex = None
+        pre = None
+        cur = new_head = new_tail = head
+        while cur != next_head:
+            new_head = new_head.next
+            cur.next = pre
+            pre = cur
+            cur = new_head
 
-        while  head != next_head:
-            nex = head.next
-            head.next = pre
-            pre = head
-            head = nex
+        new_head = pre
+        return new_head, new_tail
 
-        return pre
 
 '''
 解法3:

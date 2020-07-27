@@ -56,38 +56,43 @@ solution2
 能不能把解法1转化成递归？
 '''
 class Solution2:
-    def fourSum(self, nums, target):
+    def fourSum(self, nums: List[int], target: int) -> List[List[int]]:
         nums.sort()
-        results = []
-        self.NSum(nums,  4, target, [], results)
-        return results
+        ans = []
+        self.Nsum(nums, target, 4, [], ans)
+        return ans
 
-    def NSum(self, nums, N, target, uplayer_ans, ans):   # nums need to be sorted
+    def Nsum(self, nums, target, N,  ans_, ans):
         size = len(nums)
-        if size < N or N < 2: return
-        if target < nums[0] * N or target > nums[-1] * N: return
+        if size < N or N < 2: return []
+        if target < nums[0] * N or target > nums[-1] * N: return []
 
         if N == 2:
-            l, r = 0, size-1
-            while l<r:
+            l, r = 0, size - 1
+            while l < r:
                 sum_ = nums[l] + nums[r]
                 if sum_ == target:
-                    ans.append(uplayer_ans + [nums[l], nums[r]])
+                    ans.append(ans_ + [nums[l], nums[r]])
                     l += 1
                     while l < r and nums[l] == nums[l - 1]:
-                        l += 1
+                        l += 1  
                     r -= 1
                     while l < r and nums[r] == nums[r + 1]:
                         r -= 1
-                elif sum_ < target:
-                    l += 1
-                else:
+                elif sum_ > target:
                     r -= 1
+                    while l < r and nums[r] == nums[r + 1]:
+                        r -= 1
+                else:
+                    l += 1
+                    while l < r and nums[l] == nums[l - 1]:
+                        l += 1
         else:
             for i in range(size - N + 1):
                 if i > 0 and nums[i] == nums[i - 1]: continue
-                self.NSum(nums[i+1:], N-1, target - nums[i],uplayer_ans + [nums[i]], ans)
+                self.Nsum(nums[i+1:], target-nums[i], N-1, ans_+[nums[i]], ans)
         return
+
 
         
         

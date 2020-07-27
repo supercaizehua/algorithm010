@@ -22,22 +22,22 @@ solution1:
 '''
 class Solution1:
     def swapPairs(self, head: ListNode) -> ListNode:
-        temp = ListNode(-1)
-        temp.next = head
-        prev = temp
-        # prev = temp = ListNode(-1) 可以直接这么写
+        if not head or not head.next: return head
+        prev = dummy = ListNode(0)
+        dummy.next = head
 
         while head and head.next:
-            first, second = head, head.next
+            p1, p2 = head, head.next
 
-            prev.next = second
-            first.next = second.next
-            second.next = first
+            prev.next = p2
+            p1.next = p2.next
+            p2.next = p1
 
-            prev = first
-            head = first.next
-        
-        return temp.next
+            head = p1.next
+            prev = p1
+
+        return dummy.next
+
 
 '''
 solution2:

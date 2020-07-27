@@ -61,32 +61,34 @@ class Solution2:
 '''
 class Solution3:
     def threeSum(self, nums: List[int]) -> List[List[int]]:
-        L = len(nums)
         ans = set()
+        size = len(nums)
         nums.sort()
-        if L <= 2 or nums[0] > 0: return list(ans)
-        for i in range(L - 2):
-            # 要跳过重复的情况
-            if i > 0 and nums[i] == nums[i - 1]: continue
+        if size <= 2: return []
+        # min_ = nums[0] + nums[1] + nums[2]
+        # max_ = nums[-1] + nums[-2] + nums[-3]
+        # if min_ > 0 or max_ < 0: return []
+
+        for i in range(size-2):
+            if i > 0 and nums[i] == nums[i -1]: continue
             if nums[i] > 0: break
 
-            l, r = i + 1, L - 1
+            l, r = i + 1, size - 1
             while l < r:
-                if -nums[i] < nums[l] + nums[r]: # 大了
+                sum_ = nums[i] + nums[l] + nums[r]
+                if sum_ > 0:
                     r -= 1
                     # while l < r and nums[r] == nums[r + 1]:
                     #     r -= 1
-                elif -nums[i] > nums[l] + nums[r]:
+                elif sum_ < 0:
                     l += 1
                     # while l < r and nums[l] == nums[l - 1]:
                     #     l += 1
                 else:
-                    temp = tuple([nums[i], nums[l], nums[r]])
-                    ans.add(temp)
+                    ans.add((nums[i], nums[l], nums[r]))
                     l += 1
-                    # or r -= 1
-                    # while l < r and nums[l] == nums[l - 1]:
-                    #     l += 1
+                    r -= 1
+
         return list(ans)
         #判断条件太多, 反而影响速度
 

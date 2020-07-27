@@ -23,7 +23,7 @@ class Solution1:
             for j in range(i+1, lenth):
                 if nums[i] + nums[j] == target:
                     return [i, j]
-        return None
+        return []
             
 
 '''
@@ -39,6 +39,7 @@ class Solution2_1: #两遍哈希表 时间O(n)
                 j = dic[target - num]
                 if i != j:
                     return [i,j]
+        return []
 
 class Solution2_2: #一遍哈希表, 遍历的同时判断, 时间O(n), 比上面快一点点
     def twoSum(self, nums: List[int], target: int) -> List[int]:
@@ -48,6 +49,7 @@ class Solution2_2: #一遍哈希表, 遍历的同时判断, 时间O(n), 比上�
                 return [dic[num], i]
             else:
                 dic[target - num] = i
+        return []
 
                 
 '''
@@ -59,27 +61,33 @@ class Solution2_2: #一遍哈希表, 遍历的同时判断, 时间O(n), 比上�
 '''
 class Solution3:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
-        # copy a list
         temp = nums.copy()
-        # sort list
-        temp = sorted(temp)
-        # find two num
+        temp.sort()
+        if temp[0] + temp[1] > target: return []
+        if temp[-1] + temp[-2] < target: return []
+
+
         r, l = 0, len(nums) - 1
         while r < l:
             _sum = temp[r] + temp[l]
             if _sum > target:
                 l -= 1
+                while r < l and temp[l] == temp[l +1]:
+                    l -= 1
             elif _sum < target:
                 r += 1
+                while r < l and temp[r] == temp[r -1]:
+                    r += 1
             else:
                 break
+
+        '''temp[r], temp[l]'''
         i = nums.index(temp[r])
         nums.pop(i)
         j = nums.index(temp[l])
-        if j >= i:   #如果j>=i, 则说明 j 在 i 后面, 由于 pop 出了一个元素, 所以 index 需要 +1
+        if j >= i:
             j += 1
         return [i,j]
-
 
 
 

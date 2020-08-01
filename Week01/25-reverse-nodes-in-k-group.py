@@ -77,7 +77,7 @@ class Solution1_1:
 '''
 class Solution2:
     def reverseKGroup(self, head: ListNode, k: int) -> ListNode:
-        if not head or not head.next: return head
+        if not head: return head
 
         next_head = head
         for _ in range(k):

@@ -46,6 +46,21 @@ class Solution2:
                 j -= 1
         return res
 
+class Solution2_1:
+    def maxArea(self, height: List[int]) -> int:
+        l, r = 0, len(height) - 1
+        ans = 0
+        while l < r:
+            ans = max((r - l) * min(height[l], height[r]), ans)
+            if height[l] > height[r]:
+                r -= 1
+                while l < r and height[r] <= height[r + 1]:
+                    r -= 1
+            else:
+                l += 1
+                while l < r and height[l] <= height[l - 1]:
+                    l += 1
+        return ans
 
 
 if __name__ == "__main__":

@@ -15,12 +15,9 @@ solution1: 双指针
 时间O(n)
 空间O(1)
 '''
-
-
 class solution1:
     def removeDuplicates(self, nums: List[int]) -> int:
-        if not nums:
-            return 0
+        if not nums: return 0
         slow = 0
         for fast in range(len(nums)):
             if nums[fast] != nums[slow]:
@@ -29,17 +26,13 @@ class solution1:
         return slow + 1
 
 # 优化, 对于[0,1,2,3,4,5], 函数会全部原地复制一遍, 但实际上是不需要的, 因此添加判断条件
-
-
 class solution1_2:
     def removeDuplicates(self, nums: List[int]) -> int:
-        if not nums:
-            return 0
+        if not nums: return 0
         slow = 0
         for fast in range(len(nums)):
             if nums[fast] != nums[slow]:
                 slow += 1
-                if slow == fast:
-                    continue
+                if slow == fast: continue
                 nums[slow] = nums[fast]
         return slow + 1

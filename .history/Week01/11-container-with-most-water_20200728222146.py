@@ -35,17 +35,16 @@ lb:左边界, rb:右边界, h:高度为 min(lb, rb)
 '''
 class Solution2:
     def maxArea(self, height: List[int]) -> int:
-        l, r = 0, len(height) - 1
-        ans = 0
-        while l < r:
-            w = r - l
-            if height[l] < height[r]:
-                ans = max(ans, w * height[l])
-                l += 1
+        i, j = 0, len(height) - 1
+        res = 0
+        while i < j:
+            if height[i] < height[j]:
+                res = max(res, (j - i) * height[i])
+                i += 1
             else:
-                ans = max(ans, w * height[r])
-                r -= 1
-        return ans
+                res = max(res, (j - i) * height[j])
+                j -= 1
+        return res
 
 class Solution2_1:
     def maxArea(self, height: List[int]) -> int:

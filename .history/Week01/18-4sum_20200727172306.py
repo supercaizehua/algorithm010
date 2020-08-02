@@ -93,39 +93,13 @@ class Solution2:
                 self.Nsum(nums[i+1:], target-nums[i], N-1, ans_+[nums[i]], ans)
         return
 
-'''清洁一下递归代码'''
-class Solution2_2:
-    def fourSum(self, nums: List[int], target: int) -> List[List[int]]:
-        nums.sort()
-        ans = []
-        pre_ans = []
-        
-        def Nsum(nums, N, target, pre_ans, ans):
-            size = len(nums)
-            if size < N or N < 2 or nums[0] * N > target or nums[-1] * N < target: return []
 
-            if N == 2:
-                l, r = 0, size - 1
-                while l < r:
-                    _sum = nums[l] + nums[r]
-                    if _sum == target:
-                        ans.append(pre_ans + [nums[l], nums[r]])
-                        l += 1
-                        while l < r and nums[l] == nums[l - 1]:
-                            l += 1
-                        r -= 1
-                    elif _sum > target:
-                        r -= 1
-                    else:
-                        l += 1
-            else:
-                for i in range(size - N + 1):
-                    if i > 0 and nums[i] == nums[i-1]: continue
-                    if nums[i] * N > target: break
-                    Nsum(nums[i+1:], N-1, target-nums[i], pre_ans+[nums[i]], ans)
-            return
         
-        Nsum(nums, 4, target, pre_ans, ans)
-        return ans
-
+        
+        
+        
+        
+        
+        
+        
 

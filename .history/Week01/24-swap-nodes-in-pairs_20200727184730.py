@@ -1,4 +1,4 @@
-# coding=utf-8
+#coding=utf-8
 '''
 author: @supercaizehua
 data: 2020-6-26 16:21:07
@@ -20,21 +20,21 @@ solution1:
 双指针迭代, 时间O(n), 空间O(1)
 需要注意改变结点指向的顺序
 '''
-
-
 class Solution1:
     def swapPairs(self, head: ListNode) -> ListNode:
-        pre = dummy = ListNode(0)
+        if not head or not head.next: return head
+        prev = dummy = ListNode(0)
+        dummy.next = head
 
         while head and head.next:
             p1, p2 = head, head.next
-            pre.next = p2
+
+            prev.next = p2
             p1.next = p2.next
             p2.next = p1
 
             head = p1.next
-            pre = p1
-        pre.next = head
+            prev = p1
 
         return dummy.next
 
@@ -51,26 +51,23 @@ solution2:
 返回: return secondnode
 时间O(n), 空间O(n)
 '''
-
-
 class Solution2_1:
     def swapPairs(self, head: ListNode) -> ListNode:
         # terminator
-        if not head or not head.next:
-            return head
+        if not head or not head.next: return head
 
         # process curr level
         first = head
         second = head.next
 
-        # drill down
+        #drill down
         first.next = self.swapPairs(second.next)
 
         second.next = first
         return second
 
 
-class Solution2_2:  # 国际区大神简洁代码
+class Solution2_2: # 国际区大神简洁代码
     def swapPairs(self, head: ListNode) -> ListNode:
         if head and head.next:
             tmp = head.next
